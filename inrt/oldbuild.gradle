@@ -96,7 +96,7 @@ android {
             buildConfigField "boolean", "isMarket", "false"
             manifestPlaceholders = [appName: "inrt"]
             ndk {
-                abiFilters = ["armeabi-v7a","arm64-v8a"]
+                abiFilters = ["armeabi-v7a","arm64-v8a", "x86", "x86_64"]
             }
         }
         market {
@@ -139,6 +139,18 @@ android {
         pickFirst 'lib/armeabi-v7a/libhiai_ir_build.so'
         pickFirst 'lib/armeabi-v7a/libNative.so'
         pickFirst 'lib/armeabi-v7a/libpaddle_light_api_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/x86_64/libhiai.so'
+        pickFirst 'lib/x86_64/libhiai_ir.so'
+        pickFirst 'lib/x86_64/libhiai_ir_build.so'
+        pickFirst 'lib/x86_64/libNative.so'
+        pickFirst 'lib/x86_64/libpaddle_light_api_shared.so'
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86/libhiai.so'
+        pickFirst 'lib/x86/libhiai_ir.so'
+        pickFirst 'lib/x86/libhiai_ir_build.so'
+        pickFirst 'lib/x86/libNative.so'
+        pickFirst 'lib/x86/libpaddle_light_api_shared.so'
     }
 }
 
