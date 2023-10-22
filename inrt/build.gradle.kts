@@ -83,7 +83,7 @@ android {
         create("common") {
             buildConfigField("boolean", "isMarket", "false")
             manifestPlaceholders.putAll(mapOf("appName" to "inrt"))
-            ndk.abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a"))
+            ndk.abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64"))
         }
         create("template") {
             manifestPlaceholders.putAll(mapOf("appName" to "template"))
@@ -110,13 +110,25 @@ android {
                 "lib/arm64-v8a/libhiai_ir.so",
                 "lib/arm64-v8a/libhiai_ir_build.so",
                 "lib/arm64-v8a/libNative.so",
-                "lib/arm64-v8a/libpaddle_light_api(_shared.so",
+                "lib/arm64-v8a/libpaddle_light_api_shared.so",
                 "lib/armeabi-v7a/libc++_shared.so",
                 "lib/armeabi-v7a/libhiai.so",
                 "lib/armeabi-v7a/libhiai_ir.so",
                 "lib/armeabi-v7a/libhiai_ir_build.so",
                 "lib/armeabi-v7a/libNative.so",
-                "lib/armeabi-v7a/libpaddle_light_api(_shared.so"
+                "lib/armeabi-v7a/libpaddle_light_api_shared.so",
+                "lib/x86_64/libc++_shared.so",
+                "lib/x86_64/libhiai.so",
+                "lib/x86_64/libhiai_ir.so",
+                "lib/x86_64/libhiai_ir_build.so",
+                "lib/x86_64/libNative.so",
+                "lib/x86_64/libpaddle_light_api_shared.so",
+                "lib/x86/libc++_shared.so",
+                "lib/x86/libhiai.so",
+                "lib/x86/libhiai_ir.so",
+                "lib/x86/libhiai_ir_build.so",
+                "lib/x86/libNative.so",
+                "lib/x86/libpaddle_light_api_shared.so"
             )
         )
 
